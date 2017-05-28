@@ -27,7 +27,7 @@ void main() {
     '--token=$coverallsToken',
     '--retry=2',
     '--exclude-test-files',
-    'test/progress_test.dart',
+    'test/twitch_test.dart',
   ]);
   print(result.stdout);
   print(result.stderr);
