@@ -9,6 +9,7 @@ cache:
 before_script: dart ./tool/sanity_check.dart
 dart_task:
   - dartanalyzer
+  - pub run test -p vm
   - dartfmt
 matrix:
   # Only run dartfmt checks with stable.
