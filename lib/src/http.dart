@@ -54,7 +54,7 @@ class TwitchHttp {
     return new TwitchHttp(clientId, http: http, json: json);
   }
 
-  /// Closes the HTTP client, terminating all clients.
+  /// Closes the HTTP client, terminating all connections.
   void close() => _http.close();
 
   /// Returns a JSON-decoded result from making an API call to [pathSegments].

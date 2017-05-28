@@ -1,6 +1,6 @@
 # twitch
 
-Unofficial Twitch client for Dart and [Flutter].
+Unofficial Twitch Client for Dart and [Flutter].
 
 
 [![pub package](https://img.shields.io/pub/v/twitch.svg)](https://pub.dartlang.org/packages/twitch)

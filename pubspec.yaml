@@ -1,6 +1,6 @@
 name: twitch
 description: >
-  Unofficial Twitch client for Dart and Flutter.
+  Unofficial Twitch Client for Dart and Flutter.
 version: 0.1.0+1
 authors:
   - Matan Lurey <matanl@google.com>
