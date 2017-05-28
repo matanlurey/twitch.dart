@@ -1,4 +1,4 @@
-## 0.2.1
+## 0.3.0
 
 This should be the minimum amount of features implemented to easily create some
 UI for [AngularDart](https://angulardart.org) or [Flutter](https://flutter.io).

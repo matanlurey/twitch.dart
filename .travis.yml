@@ -1,19 +1,35 @@
+# Use the default dart configuration.
 language: dart
 sudo: false
 dart:
   - dev
   - stable
+
+# Avoid re-downloading packages across different builds if possible.
 cache:
   directories:
     - $HOME/.pub-cache
-before_script: dart ./tool/sanity_check.dart
+
+# If we aren't able to get a simple response from the Twitch API server we
+# cowardly exit. This is primarily used as to ensure something horrible hasn't
+# happened before running mostly stubbed-out unit tests.
+before_script: dart tool/sanity_check.dart
+
+# Check for analysis issues, run the test cases, and ensure `dartfmt` is run.
 dart_task:
   - dartanalyzer
   - pub run test -p vm
   - dartfmt
+
+# If we're successful this far, then report coverage information to coveralls.
 after_script: dart tool/run_coverage.dart
+
+# The Dart language is constantly being worked on, and sometimes the dev and
+# stable builds don't agree on what is considered formatted or what is analysis
+# warning free (though this does not effect _using_ the library, likely).
+#
+# We exclude `dev` from analysis and formatting checks.
 matrix:
-  # Only run dartfmt checks with stable.
   exclude:
     - dart: dev
       dart_task: dartfmt
