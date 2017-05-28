@@ -17,10 +17,8 @@ Future<Null> main() async {
   TwitchHttp http;
   try {
     http = new TwitchHttp.fromEnv();
-    final result = await http([
-      'games',
-      'top',
-    ]);
+    final twitch = new Twitch(http);
+    final result = await twitch.getTopGames();
     print(result);
     http.close();
   } catch (e, s) {

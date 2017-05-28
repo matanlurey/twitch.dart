@@ -15,7 +15,7 @@ Unofficial Twitch Client for Dart and [Flutter].
 
 ```yaml
 dependencies:
-  twitch: ^0.1.0
+  twitch: ^0.2.0
 ```
 
 ## Usage
@@ -37,11 +37,9 @@ Future<Null> main() async {
   TwitchHttp http;
   try {
     http = new TwitchHttp.fromEnv();
+    final twitch = new Twitch(http);
     // GET https://api.twitch.tv/kraken/games/top
-    final result = await http([
-      'games',
-      'top',
-    ]);
+    final result = await twitch.getTopGames();
     // Result is a JSON-decoded Dart Map. This will be strongly typed later.
     print(result);
     http.close();
