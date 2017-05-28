@@ -11,6 +11,7 @@ dart_task:
   - dartanalyzer
   - pub run test -p vm
   - dartfmt
+after_script: dart tool/run_coverage.dart
 matrix:
   # Only run dartfmt checks with stable.
   exclude:
