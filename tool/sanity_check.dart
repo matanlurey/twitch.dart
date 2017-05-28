@@ -12,7 +12,9 @@ import 'package:twitch/twitch.dart';
 ///
 /// Assumes the environment variable `TWITCH_CLIENT_ID` to be set.
 ///
-/// Otherwise fails with an [exitCode] of `1`.
+/// Otherwise fails with an [exitCode] of `1`. This is used as a (very) simple
+/// test to ensure that nothing horrible broke with our code that connects to
+/// the Twitch API server.
 Future<Null> main() async {
   TwitchHttp http;
   try {

@@ -1,3 +1,32 @@
+## 0.3.0
+
+This should be the minimum amount of features implemented to easily create some
+UI for [AngularDart](https://angulardart.org) or [Flutter](https://flutter.io).
+If you like this package and want to see it grow, consider
+[filing feature requests][features] or even better,
+[contributing][contributing].
+
+[features]: https://github.com/matanlurey/twitch.dart/issues/new
+[contributing]: https://github.com/matanlurey/twitch.dart/pulls/new
+
+- Added `TopGame`; see [games](https://dev.twitch.tv/docs/v5/reference/games/).
+- Added a `TwitchCdnImage`, wrapper around Twitch's URL locations for an image.
+- Added a `Response<T>`, which is an `Iterable<T>` with a `int total` field.
+- Experimental `Twitch#getTopGames` stable, returns `Future<Response<TopGame>`:
+
+```dart
+abstract class TopGame {
+  int get channels;
+  int get viewers;
+  int get popularity;
+  int get id;
+  String get name;
+
+  TwitchCdnImage get box;
+  TwitchCdnImage get logo;
+}
+```
+
 ## 0.2.0
 
 - Remove the `json` (decoder) property from the `TwitchHttp` client.
