@@ -1,6 +1,11 @@
 # twitch
 
-Unofficial Twitch API for Dart and [Flutter].
+Unofficial Twitch Client for Dart and [Flutter].
+
+
+[![pub package](https://img.shields.io/pub/v/twitch.svg)](https://pub.dartlang.org/packages/twitch)
+[![Build Status](https://travis-ci.org/matanlurey/twitch.dart.svg)](https://travis-ci.org/matanlurey/twitch.dart)
+[![Coverage Status](https://coveralls.io/repos/github/matanlurey/twitch.dart/badge.svg?branch=master)](https://coveralls.io/github/matanlurey/twitch.dart?branch=master)
 
 [Flutter]: https://flutter.io
 
@@ -15,7 +20,7 @@ dependencies:
 
 ## Usage
 
-This API is incomplete, and currently only supports manual HTTP calls.
+This API is incomplete, and currently only supports raw HTTP requests.
 
 For example, how to get the top played games on Twitch:
 
@@ -32,7 +37,7 @@ Future<Null> main() async {
   TwitchHttp http;
   try {
     http = new TwitchHttp.fromEnv();
-    // Calls GET https://api.twitch.tv/kraken/games/top
+    // GET https://api.twitch.tv/kraken/games/top
     final result = await http([
       'games',
       'top',
