@@ -8,7 +8,6 @@ cache:
     - $HOME/.pub-cache
 before_script: dart ./tool/sanity_check.dart
 dart_task:
-  - test: --platform vm
   - dartanalyzer
   - dartfmt
 matrix:
