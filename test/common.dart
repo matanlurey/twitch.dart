@@ -4,8 +4,13 @@
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:twitch/twitch.dart';
+
+String jsonFile(String nameWithoutExt) {
+  return new File('test/_json/$nameWithoutExt.json').readAsStringSync();
+}
 
 class FakeTwitchHttp implements TwitchHttp {
   static final Uri _baseUrl = new Uri(

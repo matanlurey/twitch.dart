@@ -1,3 +1,23 @@
+## 0.2.1
+
+- Added `TopGame`; see [games](https://dev.twitch.tv/docs/v5/reference/games/).
+- Added a `TwitchCdnImage`, wrapper around Twitch's URL locations for an image.
+- Added a `Response<T>`, which is an `Iterable<T>` with a `int total` field.
+- Experimental `Twitch#getTopGames` now returns a `Future<Response<TopGame>`:
+
+```dart
+abstract class TopGame {
+  int get channels;
+  int get viewers;
+  int get popularity;
+  int get id;
+  String get name;
+
+  TwitchCdnImage get box;
+  TwitchCdnImage get logo;
+}
+```
+
 ## 0.2.0
 
 - Remove the `json` (decoder) property from the `TwitchHttp` client.
