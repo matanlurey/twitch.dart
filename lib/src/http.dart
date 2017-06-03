@@ -110,6 +110,7 @@ class TwitchHttp {
             req.headers
               ..add(HttpHeaders.ACCEPT, _acceptValue)
               ..add(_clientId, _clientIdValue);
+
             return req.close();
           })
           .then(UTF8.decodeStream)
