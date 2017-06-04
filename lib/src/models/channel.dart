@@ -21,17 +21,14 @@ class Channel {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-          other is Channel &&
-              runtimeType == other.runtimeType &&
-              id == other.id &&
-              displayName == other.displayName &&
-              name == other.name;
+      other is Channel &&
+          runtimeType == other.runtimeType &&
+          id == other.id &&
+          displayName == other.displayName &&
+          name == other.name;
 
   @override
-  int get hashCode =>
-      id.hashCode ^
-      displayName.hashCode ^
-      name.hashCode;
+  int get hashCode => id.hashCode ^ displayName.hashCode ^ name.hashCode;
 
   @override
   String toString() {
