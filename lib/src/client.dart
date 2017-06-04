@@ -4,9 +4,11 @@
 
 import 'dart:async';
 
-import 'package:meta/meta.dart';
-
 import 'http.dart';
+import 'package:twitch/src/models/top_game.dart';
+import 'package:twitch/src/models/video.dart';
+import 'package:twitch/src/specs/top_games.dart';
+import 'package:twitch/src/specs/top_videos.dart';
 import 'spec.dart';
 
 /// An client for [Twitch's API v5](https://dev.twitch.tv/docs).
@@ -21,52 +23,13 @@ class Twitch {
   ///
   /// _Authentication is not required._
   Future<Response<TopGame>> getTopGames() => _http(const ['games', 'top'])
-      .then((response) => new Response(const _TopGamesSpec(), response));
-}
+      .then((response) => new Response(const TopGamesSpec(), response));
 
-/// TODO: Document.
-///
-/// * [API Reference](https://dev.twitch.tv/docs/v5/reference/games/).
-class TopGame {
-  final int channels;
-  final int viewers;
-  final int popularity;
-  final int id;
-  final String name;
-
-  final TwitchCdnImage box;
-  final TwitchCdnImage logo;
-
-  const TopGame({
-    @required this.channels,
-    @required this.viewers,
-    @required this.popularity,
-    @required this.id,
-    @required this.name,
-    @required this.box,
-    @required this.logo,
-  });
-}
-
-class _TopGamesSpec extends JsonResultsSpec<TopGame> {
-  const _TopGamesSpec();
-
-  @override
-  TopGame decode(Map<String, Object> json) {
-    final game = json['game'] as Map<String, Object>;
-    return new TopGame(
-      channels: json['channels'] as int,
-      viewers: json['viewers'] as int,
-      popularity: game['popularity'] as int,
-      id: game['_id'] as int,
-      name: game['name'] as String,
-      box: TwitchCdnImage.fromJson(game['box'] as Map<String, Object>),
-      logo: TwitchCdnImage.fromJson(game['logo'] as Map<String, Object>),
-    );
-  }
-
-  @override
-  List<Map<String, Object>> items(Map<String, Object> json) {
-    return json['top'] as List<Map<String, Object>>;
-  }
+  /// Returns videos sorted by current viewers on Twitch, most popular first.
+  ///
+  /// * [API Reference](https://dev.twitch.tv/docs/v5/reference/videos/).
+  ///
+  /// _Authentication is not required._
+  Future<Response<Video>> getTopVideos() => _http(const ['videos', 'top'])
+      .then((response) => new Response(const TopVideosSpec(), response));
 }
