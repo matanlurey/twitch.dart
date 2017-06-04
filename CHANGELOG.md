@@ -1,3 +1,21 @@
+## 0.3.1
+
+Added `Twitch#getTopVideos`, returning videos sorted by current viewers:
+
+```dart
+abstract class Video {
+ String get id;
+ String get description;
+ Channel get channel;
+ String get game;
+ String get title;
+ String get url;
+ TwitchCdnImage get preview;
+}
+```
+
+Special thanks to [@brianegan](https://github.com/brianegan) for this release!
+
 ## 0.3.0
 
 This should be the minimum amount of features implemented to easily create some
