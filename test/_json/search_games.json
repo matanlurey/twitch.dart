@@ -1,0 +1,24 @@
+{
+  "games": [
+    {
+      "name": "HITMAN",
+      "popularity": 18,
+      "_id": 491471,
+      "giantbomb_id": 0,
+      "box": {
+        "large": "https://static-cdn.jtvnw.net/ttv-boxart/HITMAN-272x380.jpg",
+        "medium": "https://static-cdn.jtvnw.net/ttv-boxart/HITMAN-136x190.jpg",
+        "small": "https://static-cdn.jtvnw.net/ttv-boxart/HITMAN-52x72.jpg",
+        "template": "https://static-cdn.jtvnw.net/ttv-boxart/HITMAN-{width}x{height}.jpg"
+      },
+      "logo": {
+        "large": "https://static-cdn.jtvnw.net/ttv-logoart/HITMAN-240x144.jpg",
+        "medium": "https://static-cdn.jtvnw.net/ttv-logoart/HITMAN-120x72.jpg",
+        "small": "https://static-cdn.jtvnw.net/ttv-logoart/HITMAN-60x36.jpg",
+        "template": "https://static-cdn.jtvnw.net/ttv-logoart/HITMAN-{width}x{height}.jpg"
+      },
+      "localized_name": "HITMAN",
+      "locale": ""
+    }
+  ]
+}
