@@ -1,0 +1,27 @@
+{
+  "_total": 388015,
+  "channels": [
+    {
+      "mature": false,
+      "status": "hi!  |  http://www.designbyhumans.com/shop/hiko Follow @Hiko",
+      "broadcaster_language": "en",
+      "display_name": "Hiko",
+      "game": "Counter-Strike: Global Offensive",
+      "language": "en",
+      "_id": 26991127,
+      "name": "hiko",
+      "created_at": "2011-12-23T17:36:09.142428Z",
+      "updated_at": "2017-06-04T10:00:39.496137Z",
+      "partner": false,
+      "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/hiko-profile_image-fa9474314cb6cafa-300x300.png",
+      "video_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/hiko-channel_offline_image-269c30cc6d860b5c-1920x1080.png",
+      "profile_banner": "https://static-cdn.jtvnw.net/jtv_user_pictures/hiko-profile_banner-5deef30f2102cc79-480.png",
+      "profile_banner_background_color": "",
+      "url": "https://www.twitch.tv/hiko",
+      "views": 15651912,
+      "followers": 484139,
+      "broadcaster_type": "",
+      "description": "Average Gamer. CSGO Partnerships @ Twitch . Twitter @Hiko"
+    }
+  ]
+}
