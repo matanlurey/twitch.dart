@@ -1,8 +1,9 @@
 name: twitch
 description: >
   Unofficial Twitch API for Dart and Flutter.
-version: 0.3.1
+version: 0.3.2
 authors:
+  - Brian Egan <brian@brianegan.com>
   - Matan Lurey <matanl@google.com>
 homepage: https://github.com/matanlurey/twitch.dart
 

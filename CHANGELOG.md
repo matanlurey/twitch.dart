@@ -1,3 +1,10 @@
+## 0.3.2
+
+* Added `Twitch#searchChannels|searchGames|getChannelVideos`.
+* Also significant API additions to `Channel`.
+
+Special thanks to [@brianegan](https://github.com/brianegan) for this release!
+
 ## 0.3.1
 
 Added `Twitch#getTopVideos`, returning videos sorted by current viewers:
