@@ -97,7 +97,7 @@ class TwitchHttp {
   /// Optionally specify [queryParameters] to make as part of the HTTP call.
   Future<Map<String, Object>> call(
     Iterable<String> pathSegments, {
-    Map<String, dynamic> queryParameters: const <String, dynamic>{},
+    Map<String, String> queryParameters: const <String, String>{},
   }) =>
       _http
           .getUrl(
@@ -113,6 +113,6 @@ class TwitchHttp {
 
             return req.close();
           })
-          .then(UTF8.decodeStream)
-          .then((string) => JSON.decode(string) as Map<String, Object>);
+          .then(utf8.decodeStream)
+          .then((string) => json.decode(string) as Map<String, Object>);
 }

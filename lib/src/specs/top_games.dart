@@ -9,6 +9,6 @@ class TopGamesSpec extends JsonResultsSpec<TopGame> {
 
   @override
   List<Map<String, Object>> items(Map<String, Object> json) {
-    return json['top'] as List<Map<String, Object>>;
+    return List<Map<String, Object>>.from(json['top'] as List<dynamic>);
   }
 }
