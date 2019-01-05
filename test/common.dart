@@ -39,7 +39,7 @@ class FakeTwitchHttp implements TwitchHttp {
           'No response recorded for: $uri.\n'
           'Recorded responses: ${_responses.keys.toList()}');
     }
-    return JSON.decode(_responses[uri]) as Map<String, dynamic>;
+    return json.decode(_responses[uri]) as Map<String, dynamic>;
   }
 
   @override

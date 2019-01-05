@@ -4,7 +4,6 @@
 
 import 'dart:async';
 
-import 'http.dart';
 import 'package:twitch/src/models/channel.dart';
 import 'package:twitch/src/models/game.dart';
 import 'package:twitch/src/models/top_game.dart';
@@ -14,6 +13,7 @@ import 'package:twitch/src/specs/search_games.dart';
 import 'package:twitch/src/specs/top_games.dart';
 import 'package:twitch/src/specs/top_videos.dart';
 import 'package:twitch/src/specs/videos.dart';
+import 'http.dart';
 import 'spec.dart';
 
 /// An client for [Twitch's API v5](https://dev.twitch.tv/docs).

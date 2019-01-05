@@ -9,6 +9,6 @@ class VideosSpec extends JsonResultsSpec<Video> {
 
   @override
   List<Map<String, Object>> items(Map<String, Object> json) {
-    return json['videos'] as List<Map<String, Object>>;
+    return List<Map<String, Object>>.from(json['videos'] as List<dynamic>);
   }
 }

@@ -9,6 +9,6 @@ class SearchChannelsSpec extends JsonResultsSpec<Channel> {
 
   @override
   List<Map<String, Object>> items(Map<String, Object> json) {
-    return json['channels'] as List<Map<String, Object>>;
+    return List<Map<String, Object>>.from(json['channels'] as List<dynamic>);
   }
 }

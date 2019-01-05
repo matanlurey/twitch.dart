@@ -25,7 +25,7 @@ void main() {
 
   test('should fetch the top games', () async {
     final topGames = await twitch.getTopGames();
-    expect(topGames, const isInstanceOf<Response<Game>>());
+    expect(topGames is Response<TopGame>, true);
     expect(topGames, hasLength(1));
 
     final counterStrike = topGames.first;
